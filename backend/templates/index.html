@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Email Classifier</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h1>Email Classifier</h1>
+    <form id="email-form">
+      <textarea name="text" placeholder="Ou cole seu email aqui..."></textarea>
+      <input type="file" name="file" accept=".txt,.pdf" />
+      <button type="submit">Classificar</button>
+    </form>
+    <div id="resultado" class="oculto">
+      <h2>Resultado</h2>
+      <p><strong>Categoria:</strong> <span id="categoria"></span></p>
+      <p><strong>Confiança:</strong> <span id="confianca"></span></p>
+      <p><strong>Resposta Sugerida:</strong></p>
+      <p id="resposta"></p>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script></script>
+</body>
+</html>
